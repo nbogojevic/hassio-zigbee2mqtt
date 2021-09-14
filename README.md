@@ -5,7 +5,7 @@ Run [Zigbee2mqtt] as a Home Assistant Add-on
 ## Installation
 Add the repository URL under **Supervisor → Add-on store → ⋮ → Manage add-on repositories**:
 
-    https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
+    https://github.com/nbogojevic/hassio-zigbee2mqtt
 
 The repository includes two add-ons:
 
