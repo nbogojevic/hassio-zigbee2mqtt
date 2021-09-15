@@ -10,9 +10,10 @@ Add the repository URL under **Supervisor → Add-on store → ⋮ → Manage ad
 The repository includes two add-ons:
 
 - **zigbee2mqtt** is a stable release that tracks the released versions of zigbee2mqtt.
+- **zigbee2mqtt-auxiliary** allows additional instance of zigbee2mqtt (stable release that tracks the released versions of zigbee2mqtt).
 - **zigbee2mqtt-edge** tracks the `dev` branch of zigbee2mqtt, so you can install the edge version if there are features or fixes in the dev branch that are not yet released.
 
-For more information see [the documentation](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/blob/master/zigbee2mqtt/DOCS.md).
+For more information see [the documentation](https://github.com/nbogojevic/hassio-zigbee2mqtt/blob/master/zigbee2mqtt/DOCS.md).
 
 # Changelog
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
