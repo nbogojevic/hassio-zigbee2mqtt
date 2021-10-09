@@ -1,6 +1,6 @@
 {
   "name": "Zigbee2mqtt (auxiliary)",
-  "version": "1.21.1-1",
+  "version": "1.21.2-1",
   "slug": "zigbee2mqtt-auxiliary",
   "description": "Use your ZigBee devices without the vendor's bridge or gateway (auxiliary)",
   "uart": true,
@@ -95,7 +95,7 @@
     "serial": {
       "port": "str",
       "disable_led": "bool?",
-      "adapter": "match(^zstack|deconz|zigate|ezsp$)?"
+      "adapter": "match(zstack|deconz|zigate|ezsp)?"
     },
     "blocklist": [
       "str?"
