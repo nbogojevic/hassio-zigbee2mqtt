@@ -1,3 +1,9 @@
+## 1.22.1-1
+- Updated Zigbee2MQTT to version [`1.22.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.22.1)
+
+## 1.22.0-3
+- Add availability configuration
+
 ## 1.22.0-2
 - Fix availability configuration
 
