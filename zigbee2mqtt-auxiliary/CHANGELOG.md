@@ -1,3 +1,125 @@
+## 1.35.2-1
+- Updated Zigbee2MQTT to version [`1.35.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.35.2)
+
+## 1.35.1-1
+- Updated Zigbee2MQTT to version [`1.35.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.35.1)
+
+## 1.35.0-1
+- Updated Zigbee2MQTT to version [`1.35.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.35.0)
+
+## 1.34.0-1
+- Updated Zigbee2MQTT to version [`1.34.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.34.0)
+
+## 1.33.2-1
+- Updated Zigbee2MQTT to version [`1.33.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.33.2)
+
+## 1.33.1-1
+- Updated Zigbee2MQTT to version [`1.33.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.33.1)
+
+## 1.33.0-1
+- Updated Zigbee2MQTT to version [`1.33.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.33.0)
+
+## 1.32.2-1
+- Updated Zigbee2MQTT to version [`1.32.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.32.2)
+
+## 1.32.1-1
+- Updated Zigbee2MQTT to version [`1.32.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.32.1)
+
+## 1.32.0-2
+- Fix issue with configuration URL
+
+## 1.32.0-1
+- Updated Zigbee2MQTT to version [`1.32.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.32.0)
+- Enable url setting in order to add Visit button in HA UI
+
+## 1.31.2-1
+- Updated Zigbee2MQTT to version [`1.31.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.31.2)
+
+## 1.31.1-1
+- Updated Zigbee2MQTT to version [`1.31.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.31.1)
+
+## 1.31.0-1
+- Updated Zigbee2MQTT to version [`1.31.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.31.0)
+
+## 1.30.4-1
+- Updated Zigbee2MQTT to version [`1.30.4`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.30.4)
+
+## 1.30.3-1
+- Updated Zigbee2MQTT to version [`1.30.3`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.30.3)
+
+## 1.30.2-1
+- Updated Zigbee2MQTT to version [`1.30.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.30.2)
+
+## 1.30.1-1
+- Updated Zigbee2MQTT to version [`1.30.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.30.1)
+
+## 1.30.0-1
+- Updated Zigbee2MQTT to version [`1.30.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.30.0)
+
+## 1.29.2-1
+- Updated Zigbee2MQTT to version [`1.29.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.29.2)
+
+## 1.29.1-1
+- Updated Zigbee2MQTT to version [`1.29.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.29.1)
+
+## 1.29.0-1
+- Updated Zigbee2MQTT to version [`1.29.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.29.0)
+
+## 1.28.4-1
+- Updated Zigbee2MQTT to version [`1.28.4`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.28.4)
+
+## 1.28.3-1
+- Updated Zigbee2MQTT to version [`1.28.3`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.28.3)
+
+## 1.28.2-1
+- Updated Zigbee2MQTT to version [`1.28.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.28.2)
+
+## 1.28.1-1
+- Updated Zigbee2MQTT to version [`1.28.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.28.1)
+
+## 1.28.0-1
+- Updated Zigbee2MQTT to version [`1.28.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.28.0)
+- Fix `Can't open config file at null/configuration.yaml` error
+
+## 1.27.2-1
+- Updated Zigbee2MQTT to version [`1.27.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.27.2)
+
+## 1.27.1-1
+- Updated Zigbee2MQTT to version [`1.27.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.27.1)
+- Fix Zigbee2MQTT process being killed instead of stopped when addon is stopped. This prevented the backup on shutdown from happening. 
+
+## 1.27.0-1
+- Updated Zigbee2MQTT to version [`1.27.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.27.0)
+
+## 1.26.0-1
+- Updated Zigbee2MQTT to version [`1.26.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.26.0)
+
+## 1.25.2-1
+- Updated Zigbee2MQTT to version [`1.25.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.25.2)
+
+## 1.25.1-2
+- Fixes for [s6 v3 update](https://developers.home-assistant.io/blog/2022/05/12/s6-overlay-base-images)
+- Pin base image version to 3.14 as 3.15 doesn't work yet
+
+## 1.25.1-1
+- Updated Zigbee2MQTT to version [`1.25.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.25.1)
+
+## 1.25.0-1
+- Updated Zigbee2MQTT to version [`1.25.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.25.0)
+- ⚠️ **Breaking changes**
+    - Most Zigbee2MQTT configuration is now done in Zigbee2MQTT directly
+      (either via the UI or by modifying the configuration file, usually 
+      `/config/zigbee2mqtt/configuration.yaml`, directly).
+
+      As Zigbee2MQTT won't start with an [MQTT server](https://www.zigbee2mqtt.io/guide/configuration/mqtt.html)
+      or [serial adapter](https://www.zigbee2mqtt.io/guide/configuration/adapter-settings.html)
+      you must configure these through the add-on configuration page before you
+      can start Zigbee2MQTT for the first time.
+
+      Existing installations should be able to safely remove the Zigbee2MQTT
+      configuration from the add-on configuration as these values should have
+      already been persisted to the configuration file.
+
 ## 1.24.0-1
 - Updated Zigbee2MQTT to version [`1.24.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.24.0)
 
@@ -5,8 +127,7 @@
 - Updated Zigbee2MQTT to version [`1.23.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.23.0)
 
 ## 1.22.2-1
-- Updated Zigbee2MQTT to version [`1.22.2`](https://github.com/Koenkk/zigbee2mqtt/
-releases/tag/1.22.2)
+- Updated Zigbee2MQTT to version [`1.22.2`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.22.2)
 
 ## 1.22.1-1
 - Updated Zigbee2MQTT to version [`1.22.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.22.1)

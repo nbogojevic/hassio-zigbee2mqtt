@@ -33,7 +33,7 @@
     "8485/tcp": "Socat tcp-listen port",
     "8099/tcp": "Frontend tcp-listen port"
   },
-  "options": {
+    "options": {
     "data_path": "/config/zigbee2mqtt",
     "socat": {
       "enabled": false,
