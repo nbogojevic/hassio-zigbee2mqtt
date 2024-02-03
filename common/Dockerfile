@@ -1,16 +1,16 @@
 ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM $BUILD_FROM as base
 
 ENV LANG C.UTF-8
 ARG BUILD_VERSION
 
-RUN apk add --no-cache --virtual .build-dependencies \
-    make gcc g++ linux-headers udev git python2 && \
-    apk add --no-cache nodejs npm socat
+RUN apk add --no-cache socat tini nodejs
 
-RUN [ "${BUILD_VERSION}" = "edge" ] || apk add --no-cache jq
+# Dependencies and build
+FROM base as dependencies_and_build
 
-RUN if [ "${BUILD_VERSION}" = "edge" ]; \
+RUN apk add --no-cache --virtual .buildtools npm make gcc g++ linux-headers udev git python3 && \
+    if [ "${BUILD_VERSION}" = "edge" ]; \
     then \
         echo "Installing Edge version" && \
         git clone -b dev --single-branch --depth 1 \
@@ -26,27 +26,26 @@ RUN if [ "${BUILD_VERSION}" = "edge" ]; \
         mkdir /app/dist && \
         jq -n --arg commit ${BUILD_VERSION%-*} '$commit' > /app/dist/.hash ; \
     fi; \
-    echo "Installed zigbee2mqtt @ version $(cat /app/dist/.hash)"
-
-RUN cd /app && \
+    echo "Installed Zigbee2MQTT @ version $(cat /app/dist/.hash)" && \
+    cd /app && \
     npm ci --no-audit --no-optional --no-update-notifier --unsafe-perm && \
     npm run build && \
     rm -rf node_modules && \
-    npm ci --no-audit --no-optional --no-update-notifier --only=production --unsafe-perm && \
-    apk del --no-cache --purge .build-dependencies && \
-    rm -rf docs test images data docker LICENSE README.md update.sh lib && \
-    rm -rf npm-shrinkwrap.json \
-          node-modules/zigbee-herdsman/npm-shrinkwrap.json \
-          node-modules/zigbee-herdsman-converters/npm-shrinkwrap.json && \
-    rm -rf /root/.cache /root/.npm
+    npm ci --no-audit --no-optional --no-update-notifier --production --unsafe-perm && \
+    # Serialport needs to be rebuild for Alpine https://serialport.io/docs/9.x.x/guide-installation#alpine-linux
+    npm rebuild --build-from-source && \
+    apk del .buildtools
+
+# Release
+FROM base as release
+
+WORKDIR /app
 
 COPY rootfs /
+COPY --from=dependencies_and_build /app/node_modules ./node_modules
+COPY --from=dependencies_and_build /app/dist ./dist
+COPY --from=dependencies_and_build /app/package.json /app/LICENSE /app/index.js ./
 
-RUN if [ "${BUILD_VERSION}" = "edge" ]; \
-    then \
-        mv /etc/cont-init.d/zigbee2mqtt-edge.sh /etc/cont-init.d/zigbee2mqtt.sh && \
-        mv /etc/services.d/zigbee2mqtt/run-edge /etc/services.d/zigbee2mqtt/run; \
-    else \
-        rm /etc/cont-init.d/zigbee2mqtt-edge.sh && \
-        rm /etc/services.d/zigbee2mqtt/run-edge; \
-    fi
+ENV NODE_ENV production
+
+ENTRYPOINT [ "/sbin/tini", "--", "/docker-entrypoint.sh"]
