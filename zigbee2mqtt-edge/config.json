@@ -1,8 +1,8 @@
 {
-  "name": "Zigbee2mqtt Edge",
+  "name": "Zigbee2MQTT Edge",
   "version": "edge",
   "slug": "zigbee2mqtt_edge",
-  "description": "Development build of the Zigbee2mqtt add-on",
+  "description": "Development build of the Zigbee2MQTT add-on",
   "uart": true,
   "url": "https://github.com/nbogojevic/hassio-zigbee2mqtt/tree/master/zigbee2mqtt-edge",
   "startup": "application",
@@ -17,17 +17,21 @@
     "i386"
   ],
   "boot": "auto",
+  "init": false,
   "ingress": true,
+  "timeout": 30,
   "panel_icon": "mdi:zigbee",
   "map": [
     "share:rw",
     "config:rw"
   ],
   "ports": {
-    "8485/tcp": 8485
+    "8485/tcp": 8485,
+    "8099/tcp": null
   },
   "ports_description": {
-    "8485/tcp": "Socat tcp-listen port"
+    "8485/tcp": "Socat tcp-listen port",
+    "8099/tcp": "Frontend tcp-listen port"
   },
   "options": {
     "data_path": "/config/zigbee2mqtt",
@@ -42,7 +46,6 @@
     "serial": {}
   },
   "schema": {
-    "zigbee_shepherd_devices": "bool?",
     "zigbee_herdsman_debug": "bool?",
     "data_path": "str",
     "socat": {
