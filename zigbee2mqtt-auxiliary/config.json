@@ -1,6 +1,6 @@
 {
   "name": "Zigbee2MQTT (auxiliary)",
-  "version": "1.35.2-1",
+  "version": "1.36.0-1",
   "slug": "zigbee2mqtt-auxiliary",
   "description": "Use your ZigBee devices without the vendor's bridge or gateway (auxiliary)",
   "uart": true,
